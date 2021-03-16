@@ -33,12 +33,10 @@ ActiveRecord::Schema.define(version: 2021_03_16_052000) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
-
   create_table "cart_items", force: :cascade do |t|
     t.integer "customer_id"
     t.integer "item_id"
     t.integer "quantity"
-
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
