@@ -16,3 +16,30 @@
 @import "bootstrap";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+.image_back {
+   background-image: url('muneer-ahmed-ok-E_becAyYlmM-unsplash.jpg');
+   background-size: cover;
+   background-position: center;
+   width: 750px;
+   height: 300px;
+   padding: 50px 200px;
+}
+
+.white_back {
+   width: 400px;
+   height: 200px;
+   background-color: white;
+}
+
+.all_item {
+   text-align: right;
+}
+
