@@ -13,4 +13,7 @@ class Customers::CustomersController < ApplicationController
 
   def bye
   end
+  
+  def cancel
+  end
 end
