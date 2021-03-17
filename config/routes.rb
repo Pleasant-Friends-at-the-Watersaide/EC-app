@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   #　会員側ののルーティング
   devise_for :customers, controllers: {
     sessions:      'customers/sessions',
@@ -22,13 +22,13 @@ Rails.application.routes.draw do
     post 'orders/confirm' => 'orders#confirm'
     get  'orders/thank'   => 'orders#thank'
   end
-  
+
   #管理者側のルーティング
   devise_for :admins, controllers: {
     sessions:      'admins/sessions',
     passwords:     'admins/passwords',
   }
-  
+
   namespace :admins do
     root to: 'homes#top'
     resources :customers    , only: [:index, :edit, :update, :show]
