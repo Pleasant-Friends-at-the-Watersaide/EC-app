@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   scope module: :customers do
     root to: 'homes#top'
     get 'about' => 'homes#about'
-    resources :customers, only: [:edit, :update, :cancel, :bye]
+    resources :customers, only: [:edit, :update]
     get   'customers/my_page' => 'customers#show'
     get   'customers/cancel'  => 'customers#cancel'
     patch 'customers/bye'     => 'customers#bye'
