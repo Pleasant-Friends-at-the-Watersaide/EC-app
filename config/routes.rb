@@ -1,5 +1,26 @@
 Rails.application.routes.draw do
   
+  namespace :customers do
+    get 'orders/new'
+    get 'orders/index'
+    get 'orders/thank'
+  end
+  namespace :customers do
+    get 'cart_items/index'
+  end
+  namespace :customers do
+    get 'items/index'
+    get 'items/show'
+  end
+  namespace :customers do
+    get 'addresses/index'
+    get 'addresses/edit'
+  end
+  namespace :customers do
+    get 'customers/show'
+    get 'customers/edit'
+    get 'customers/cancel'
+  end
   #　会員側ののルーティング
   devise_for :customers, controllers: {
     sessions:      'customers/sessions',
