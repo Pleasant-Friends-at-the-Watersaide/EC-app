@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  
   #　会員側ののルーティング
   devise_for :customers, controllers: {
     sessions:      'customers/sessions',
