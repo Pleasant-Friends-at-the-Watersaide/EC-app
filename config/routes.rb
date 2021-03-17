@@ -9,11 +9,12 @@ Rails.application.routes.draw do
 
   scope module: :customers do
     root to: 'homes#top'
-    get 'about' => 'homes#about'
-    resources :customers, only: [:edit, :update]
+    get   'about'             => 'homes#about'
     get   'customers/my_page' => 'customers#show'
+    get   'customers/edit'    => 'customers#edit'
     get   'customers/cancel'  => 'customers#cancel'
     patch 'customers/bye'     => 'customers#bye'
+    patch 'customers'            => 'customers#update'
     resources :addresses  , only: [:index, :create, :destroy, :edit, :update]
     resources :items      , only: [:index, :show]
     resources :cart_items , only: [:index, :create, :update, :destroy]
@@ -25,8 +26,8 @@ Rails.application.routes.draw do
 
   #管理者側のルーティング
   devise_for :admins, controllers: {
-    sessions:      'admins/sessions',
-    passwords:     'admins/passwords',
+    sessions:  'admins/sessions',
+    passwords: 'admins/passwords',
   }
 
   namespace :admins do
