@@ -1,5 +1,6 @@
 class Customers::CustomersController < ApplicationController
   def show
+    @customer = current_customer
   end
 
   def edit
@@ -13,7 +14,7 @@ class Customers::CustomersController < ApplicationController
 
   def bye
   end
-  
+
   def cancel
   end
 end
