@@ -18,5 +18,9 @@ class Customer < ApplicationRecord
     validates :phone_number
     validates :email, uniqueness: true
   end
+  
+  def active_for_authentication?
+    super && (self.is_deleted == false)
+  end
 
 end

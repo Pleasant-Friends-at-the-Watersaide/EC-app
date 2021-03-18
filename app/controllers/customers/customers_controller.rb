@@ -7,9 +7,6 @@ class Customers::CustomersController < ApplicationController
     @customer = current_customer
   end
 
-  def cancel
-  end
-
   def update
     @customer = current_customer
     if @customer.update(customer_params)
@@ -20,10 +17,17 @@ class Customers::CustomersController < ApplicationController
     end
   end
 
-  def bye
+  def cancel
   end
 
-  def cancel
+  def bye
+    @customer = current_customer
+
+    @customer.update(is_deleted: true)
+    reset_session
+
+    flash[:notice] = "ご利用ありがとうございました。またのご利用をお待ちしております。"
+    redirect_to root_path
   end
 
   private
