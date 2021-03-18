@@ -1,12 +1,6 @@
 Rails.application.routes.draw do
-  
-  #　会員側ののルーティング
-  devise_for :customers, controllers: {
-    sessions:      'customers/sessions',
-    passwords:     'customers/passwords',
-    registrations: 'customers/registrations'
-  }
 
+  #　会員側ののルーティング
   scope module: :customers do
     root to: 'homes#top'
     get   'about'             => 'homes#about'
@@ -23,13 +17,19 @@ Rails.application.routes.draw do
     post 'orders/confirm' => 'orders#confirm'
     get  'orders/thank'   => 'orders#thank'
   end
-  
+
+  devise_for :customers, controllers: {
+    sessions:      'customers/sessions',
+    passwords:     'customers/passwords',
+    registrations: 'customers/registrations', only: [:create]
+  }
+
   #管理者側のルーティング
   devise_for :admins, controllers: {
     sessions:  'admins/sessions',
     passwords: 'admins/passwords',
   }
-  
+
   namespace :admins do
     root to: 'homes#top'
     resources :customers    , only: [:index, :edit, :update, :show]

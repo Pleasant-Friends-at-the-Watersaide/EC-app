@@ -1,2 +1,45 @@
-<h1>Customers::Customers#edit</h1>
-<p>Find me in app/views/customers/customers/edit.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <h4>会員情報編集</h4>
+      <%= form_with model: @customer, url:customers_path, local:true, method: :patch do |f| %>
+
+        <div class="form-group">
+          <%= f.label :last_name, "(姓)" %>
+          <%= f.text_field :last_name, autofocus: true, class: "form-control" %>
+          <%= f.label :first_name, "(名)" %>
+          <%= f.text_field :first_name, autofocus: true, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :kana_last_name, "(セイ)" %>
+          <%= f.text_field :kana_last_name, autofocus: true, class: "form-control" %>
+          <%= f.label :kana_first_name, "(メイ)" %>
+          <%= f.text_field :kana_first_name, autofocus: true, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :email,"メールアドレス" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :postcode, "郵便番号(ハイフンなし)" %>
+          <%= f.text_field :postcode, autofocus: true, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :address, "住所" %>
+          <%= f.text_field :address, autofocus: true, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :phone_number, "電話番号(ハイフンなし)" %>
+          <%= f.text_field :phone_number, autofocus: true, class: "form-control" %>
+        </div>
+
+        <%= f.submit '保存', class: "btn btn-success" %>
+      <% end %>
+    </div>
+  </div>
+</div>
