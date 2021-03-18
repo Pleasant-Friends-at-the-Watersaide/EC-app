@@ -23,7 +23,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} 
+}
 
 .image_back {
    background-image: url('muneer-ahmed-ok-E_becAyYlmM-unsplash.jpg');
@@ -43,3 +43,9 @@
 .all_item {
    text-align: right;
 }
+footer{
+   width: 100%;
+   position: absolute;
+   bottom: 0;
+}
+
