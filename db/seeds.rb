@@ -53,12 +53,12 @@ end
      )
  end
 
- # 10.times do |n|
- #  Item.create!(
- #      name: "チョコケーキ#{n + 1}",
- #      genre_id: n + 1,
- #      introduction: "チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高",
- #      price: 10 + n * 100,
- #      image: open("./app/assets/images/cake-2001781_1280.jpg")
- #    )
- # end
+ 3.times do |n|
+  Item.create!(
+      name: "チョコケーキ#{n + 1}",
+      genre_id: n + 1,
+      introduction: "チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高",
+      price: 1000 + n * 100,
+      image: open("./app/assets/images/cake-2001781_1280.jpg")
+    )
+ end
