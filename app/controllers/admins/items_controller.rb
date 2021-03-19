@@ -20,5 +20,4 @@ class Admins::ItemsController < ApplicationController
   def update
   end
 
-
 end
