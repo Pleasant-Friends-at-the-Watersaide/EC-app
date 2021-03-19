@@ -18,7 +18,7 @@
                 <%= customer.id =%>
               </td>
               <td class="text-left">
-              <%= link_to admins_customers_path(customer), class: "btn-link" do %>
+              <%= link_to admins_customer_path(customer), class: "btn-link" do %>
                 <i class="far fas-user">
                 <%= customer.last_name + " " + customer.first_name %>
                 </i>
@@ -43,4 +43,3 @@
       <div class="text-center"><%= paginate(@customers) %></div>
   </div>
 </div>
-</body>
