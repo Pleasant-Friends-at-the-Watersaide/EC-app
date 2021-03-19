@@ -10,7 +10,7 @@ Admin.create!(
     password: "111111"
   )
 
-10.times do |n|
+11.times do |n|
     Customer.create!(
      email: "customer#{n + 1}@customer",
      first_name: "名前#{n + 1}",
