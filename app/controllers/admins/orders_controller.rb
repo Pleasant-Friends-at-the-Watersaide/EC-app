@@ -5,6 +5,14 @@ class Admins::OrdersController < ApplicationController
   end
 
   def update
+     @order = Order.find(params[:id])
+  if @order.update(order_params)
+    flash[:notice] = "You have edited successfully."
+     @order = Order.find(params[:id])
+     redirect_to admins_order_path
+  else
+     render :edit
+  end
   end
 
   private
