@@ -10,7 +10,7 @@ Admin.create!(
     password: "111111"
   )
 
-10.times do |n|
+11.times do |n|
     Customer.create!(
      email: "customer#{n + 1}@customer",
      first_name: "名前#{n + 1}",
@@ -53,12 +53,21 @@ end
      )
  end
 
+<<<<<<< HEAD
  10.times do |n|
+=======
+ 3.times do |n|
+>>>>>>> 70a2514d42f5233e67fca0ef6c2b5b143251712f
   Item.create!(
       name: "チョコケーキ#{n + 1}",
       genre_id: n + 1,
       introduction: "チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高",
+<<<<<<< HEAD
       price: 10 + n * 100,
       # image: open("./app/assets/images/cake-2001781_1280.jpg")
+=======
+      price: 1000 + n * 100,
+      image: open("./app/assets/images/cake-2001781_1280.jpg")
+>>>>>>> 70a2514d42f5233e67fca0ef6c2b5b143251712f
     )
  end
