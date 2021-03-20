@@ -41,12 +41,12 @@ end
       postal_code: "1234567",
       address: "広島県八千代1−1−1",
       payment_method: 0,
-      shipping_cost: "",
+      shipping_cost: "800",
       total_price: "#{n * 800 + 800}",
       status: 0,
     )
  end
-
+ 
  10.times do |n|
   Genre.create!(
       name: "ケーキ#{n + 1}",

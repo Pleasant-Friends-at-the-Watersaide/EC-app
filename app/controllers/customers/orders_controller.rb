@@ -1,17 +1,21 @@
 class Customers::OrdersController < ApplicationController
-  def new
-  end
-
-  def create
-  end
   
   def index
   end
   
   def show
   end
+
+  
+  def new
+  end
+
+  def create
+  end
+  
   
   def confirm
+    @cart_items = current_customer.cart_items
   end
   
   def thank
