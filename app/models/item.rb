@@ -5,7 +5,11 @@ class Item < ApplicationRecord
 
   attachment :image
 
-  validates :introduction,length: {maximum: 200}
+  with_options presence: true do
+    validates :name
+    validates :introduction, length: {maximum: 200}
+    validates :price
+  end
 
   enum is_active:{"販売中": true, "販売停止中": false }
 end
