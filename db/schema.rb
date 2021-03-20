@@ -75,7 +75,7 @@ ActiveRecord::Schema.define(version: 2021_03_19_082649) do
     t.string "image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "is_active", default: false, null: false
+    t.boolean "is_active"
   end
 
   create_table "order_details", force: :cascade do |t|
