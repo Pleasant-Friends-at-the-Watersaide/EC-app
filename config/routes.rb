@@ -25,11 +25,6 @@ Rails.application.routes.draw do
   }
 
   #管理者側のルーティング
-  devise_for :admins, controllers: {
-    sessions:  'admins/sessions',
-    passwords: 'admins/passwords',
-  }
-
   namespace :admins do
     root to: 'homes#top'
     resources :customers    , only: [:index, :edit, :update, :show]
@@ -38,4 +33,10 @@ Rails.application.routes.draw do
     resources :order_details, only: [:update]
     resources :genres       , only: [:index, :create, :edit, :update]
   end
+
+  devise_for :admins, controllers: {
+    sessions:  'admins/sessions',
+    passwords: 'admins/passwords',
+  }
+
 end
