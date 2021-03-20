@@ -34,9 +34,9 @@ end
  end
 
 
- 12.times do |n|
+ 11.times do |n|
   Order.create!(
-      customer_id: 1,
+      customer_id: n + 1,
       send_name: "太郎#{n + 1}",
       postal_code: "1234567",
       address: "広島県八千代1−1−1",
