@@ -1,4 +1,5 @@
 class Customers::OrdersController < ApplicationController
+
   def new
   end
 
@@ -15,6 +16,7 @@ class Customers::OrdersController < ApplicationController
   end
 
   def confirm
+    @cart_items = current_customer.cart_items
   end
 
   def thank
