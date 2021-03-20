@@ -1,2 +1,60 @@
-<h1>Customers::CartItems#index</h1>
-<p>Find me in app/views/customers/cart_items/index.html.erb</p>
+<div class="container">
+  <div class="row mt-4">
+    <div class="col">
+      <h4>ショッピングカート</h4>
+    </div>
+    <div class="col-3">
+      <%= link_to 'カートを空にする', '#', class: "btn btn-sm btn-danger"%>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col">
+      <table class="table table-bordered">
+        <tr class="table-active">
+          <th>商品名</th>
+          <th>単価(税込)</th>
+          <th>数量</th>
+          <th>小計</th>
+          <th></th>
+        </tr>
+        <tr>
+          <!--each文が入る-->
+          <td>
+            カートの商品画像と商品名
+          </td>
+          <td>商品単価</td>
+          <td>
+
+          </td>
+          <td>
+            小計金額
+          </td>
+          <td>
+            <%= link_to '削除する', '#', method: :delete, class: "btn btn-sm btn-danger" %>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <%= link_to '買い物を続ける', root_path, class: "btn btn-primary" %>
+    </div>
+    <div class="col-3">
+      <table class="table table-bordered">
+        <tr>
+          <th class="table-active">合計金額</th>
+          <td>〇〇円</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col text-center">
+      <%= link_to '情報入力に進む', new_order_path, class: 'btn btn-success' %>
+    </div>
+  </div>
+</div>
