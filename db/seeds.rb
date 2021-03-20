@@ -46,7 +46,7 @@ end
       status: 0,
     )
  end
- 
+
  10.times do |n|
   Genre.create!(
       name: "ケーキ#{n + 1}",
