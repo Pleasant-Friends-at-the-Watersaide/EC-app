@@ -34,7 +34,7 @@
         <tr>
           <th class="table-active">商品合計</th>
           <td>
-            <%= (@order.total_price - @order.shipping_cost).to_s(:delimited) %>
+            <%= @order.total_price.to_s(:delimited) %>
           </td>
         </tr>
         <tr>
@@ -46,7 +46,7 @@
             <strong>ご請求額</strong>
           </th>
           <td>
-            <%= @order.total_price.to_s(:delimited) %>
+            <%= (@order.total_price + @order.shipping_cost).to_s(:delimited) %>
           </td>
         </tr>
       </table>
@@ -63,7 +63,7 @@
           <th>小計</th>
         </tr>
         <tr>
-          <!--注文商品のeach文を-->
+          <!--注文商品のeach文を入れる-->
           <td></td>
           <td></td>
           <td></td>
