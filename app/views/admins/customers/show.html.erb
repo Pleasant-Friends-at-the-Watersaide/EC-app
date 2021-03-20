@@ -34,9 +34,12 @@
           <% end %>
         </p>
       </div>
-      <div class="action">
+      <div class="action d-flex">
         <%= link_to "編集する",edit_admins_customer_path(@customer), class:"btn btn-success" %>
-        <%= link_to "注文履歴一覧を見る",admins_root_path(@customer), class:"btn btn-info" %>
+          <%= form_with(url: admins_root_path, local: true, method: :get) do |f| %>
+          <%= f.hidden_field :id, :value => @customer.id %>
+          <%= f.submit "注文履歴一覧を見る", class: "btn btn-info ml-4" %>
+        <% end %>
       </div>
     </div>
   </div>
