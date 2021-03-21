@@ -39,7 +39,7 @@
         <tr>
           <th class="info">送料</th>
           <td class="text-right">
-            <%= @cost.shipping_cost %>円
+            <%= @order.shipping_cost %>円
           </td>
         </tr>
         <tr>
@@ -51,7 +51,7 @@
         <tr>
           <th class="info">請求金額</th>
           <td class="text-right">
-            <%= (@total + @cost.shipping_cost).to_s(:delimited, delimiter: ',') %>円
+            <%= (@total + @order.shipping_cost).to_s(:delimited, delimiter: ',') %>円
           </td>
         </tr>
       </table>
