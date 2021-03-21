@@ -1,15 +1,14 @@
 <div class="container">
-  <div class="row">
+  <div class="row mt-3">
     <div class="col-md-10">
       <h3>商品一覧</h3>
-      <div class='mb-3 text-right'>
-        <button type="button" class="btn btn-light shadow-sm rounded-circle p-0" style="width:2rem;height:2rem;">
-          <%= link_to "＋", new_admins_item_path, class:"no-underline" %>
-        </button>
-      </div>
+    </div>
+    <div class="col-md-2">
+      <%= link_to "", new_admins_item_path, class: "btn btn--circle btn--shadow fas fa-plus shadow-lg" %>
     </div>
   </div>
-  <div class="row">
+  
+  <div class="row mt-3">
     <table class="table">
       <thead>
         <tr class="table-active">
