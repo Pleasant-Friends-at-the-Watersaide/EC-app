@@ -13,7 +13,6 @@ class Customers::OrdersController < ApplicationController
   end
 
   def show
-    @order = Order.find(params[:id])
   end
 
   def confirm
@@ -48,7 +47,7 @@ class Customers::OrdersController < ApplicationController
   end
 
   end
-  
+
   def thank
   end
 
