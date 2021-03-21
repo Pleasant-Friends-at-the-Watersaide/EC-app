@@ -1,10 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="mx-auto col-md-8 mt-4 mb-4">
-      <div class="image_back">
-        <div class="white_back">
-          <p class="font-text mx-auto py-5">
-            ようこそ、ながのCAKEへ！</br>
+      <div class="box-background">
+        <div class="top-box">
+          <h1 class="top-title">ようこそ、ながのCAKEへ！</h1>
+          <p class=" top-text">
             このサイトは、ケーキ販売のECサイトになります。</br>
             会員でない方も商品の閲覧はできますが、</br>
             購入には会員登録が必要になります。
@@ -24,7 +24,7 @@
        <%= attachment_image_tag item, :image, :fill, 200, 150, fallback: "no_image.jpg" %><br>
        <%= item.name %><br>
        <%= item.price.to_s(:delimited, delimiter: ',') %>円
-     </div>  
+     </div>
     <% end %>
   </div>
   <div class="all_item">
