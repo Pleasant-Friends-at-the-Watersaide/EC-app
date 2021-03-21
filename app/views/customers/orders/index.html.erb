@@ -2,7 +2,7 @@
   <div class="row mx-auto">
     <div class="col-md-12">
       <section class="headline mb-3">
-       <h3>注文履歴一覧</h3>
+        <h3>注文履歴一覧</h3>
       </section>
       <div class="order-table">
         <table class="table">
@@ -13,19 +13,32 @@
               <th>注文商品</th>
               <th>支払い金額</th>
               <th>ステータス</th>
+              <th>注文詳細</th>
             </tr>
           </thead>
           <tbody>
             <% @orders.each do |order| %>
-             <tr>
-               <td><%= order.created_at.strftime('%Y/%m/%d') %></td>
-               <td><%= order.address %></td>
-               <% order.order_details.each do |order_detail| %>
-               <td><%= order_detail.item.name %></td>
-               <% end %>
-               <td></td>
-               <td><%= order.total_price.to_s(:delimited)  %></td>
-               <td><%= order.status %></td>
+            <tr>
+              <td><%= order.created_at.strftime('%Y/%m/%d') %></td>
+              <td class="text-left">
+                <%= order.postal_code %>
+                <%= order.address %>
+                <%= order.send_name %>
+              </td>
+              <td>
+                <% order.order_details.each do |order_detail| %>
+                  <%= order_detail.item.name %>
+                <% end %>
+              </td>
+              <td>
+                <%= order.total_price.to_s(:delimited)  %>
+              </td>
+              <td>
+                <%= order.status %>
+                </td>
+              <td>
+                <%= link_to "注文詳細", order_path(order), class: "btn btn-success" %>
+              </td>
              </tr>
             <% end %>
           </tbody>

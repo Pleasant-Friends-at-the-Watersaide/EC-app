@@ -6,6 +6,9 @@ class Customers::OrdersController < ApplicationController
   end
 
   def create
+    @order = current_customer..orders.new(order_params)
+    @order.save
+    redirect_to orders_thank_path
   end
 
   def index
@@ -13,10 +16,11 @@ class Customers::OrdersController < ApplicationController
   end
 
   def show
+    @order = Order.find(params[:id])
+    @order_details = @order.order_details
   end
 
   def confirm
-
       @cart_items = current_customer.cart_items
       @order = Order.new #一旦初期化をするorderに何もない状態にする
 
@@ -51,4 +55,9 @@ class Customers::OrdersController < ApplicationController
   def thank
   end
 
+  private
+
+  def order_params
+    params.require(:order).permit(:send_name, :postal_code, :address, :payment_method, :total_price)
+  end
 end
