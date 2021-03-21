@@ -11,5 +11,7 @@ class Item < ApplicationRecord
     validates :price
   end
 
-  enum is_active:{"販売中": true, "うりきれ": false }
+   def active_for_authentication?
+    super && (self.is_active == false)
+   end
 end

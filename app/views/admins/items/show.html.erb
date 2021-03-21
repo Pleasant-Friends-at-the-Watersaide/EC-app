@@ -28,7 +28,13 @@
         </tr>
         <tr>
           <td>販売ステータス</td>
-          <td><%= @item.is_active %></td>
+          <td>
+          <% if @item.is_active == false %>
+            <i class="far fa-circle limegreen">販売中</i>
+          <% else %>
+            <i class="fas fa-times lightgray">販売停止中</i>
+          <% end %>
+          </td>
         </tr>
       </table>
       <%= link_to '編集する', edit_admins_item_path(@item), class: 'btn btn-success' %>
