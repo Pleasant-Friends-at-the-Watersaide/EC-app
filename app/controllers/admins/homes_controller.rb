@@ -1,4 +1,6 @@
 class Admins::HomesController < ApplicationController
+  before_action :authenticate_admin!
+  
   def top
     path = Rails.application.routes.recognize_path(request.referer)
     if path[:controller] == "admins/customers" && path[:action] == "show"

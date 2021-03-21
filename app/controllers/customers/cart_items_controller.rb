@@ -1,4 +1,6 @@
 class Customers::CartItemsController < ApplicationController
+  before_action :authenticate_customer!
+  
   def index
     tax =  1.10
     @cart_items = current_customer.cart_items
