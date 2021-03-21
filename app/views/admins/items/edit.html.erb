@@ -4,6 +4,9 @@
       <h4>商品編集</h4>
     </div>
   </div>
+  <div id="error">
+    <%= render "customers/shared/error_messages", resource: @item %>
+  </div>
 
   <%= form_with model: @item, url: admins_item_path, method: :patch, local: true do |f| %>
     <div class="row">
