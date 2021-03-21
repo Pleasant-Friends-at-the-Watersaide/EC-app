@@ -4,7 +4,7 @@
       <h4>ショッピングカート</h4>
     </div>
     <div class="col-3">
-      <%= link_to 'カートを空にする', '#', class: "btn btn-sm btn-danger"%>
+      <%= link_to 'カートを空にする', cart_items_all_destroy_path, method: :delete, class: "btn btn-sm btn-danger"%>
     </div>
   </div>
 
@@ -18,22 +18,28 @@
           <th>小計</th>
           <th></th>
         </tr>
-        <tr>
-          <!--each文が入る-->
-          <td>
-            カートの商品画像と商品名
-          </td>
-          <td>商品単価</td>
-          <td>
-
-          </td>
-          <td>
-            小計金額
-          </td>
-          <td>
-            <%= link_to '削除する', '#', method: :delete, class: "btn btn-sm btn-danger" %>
-          </td>
-        </tr>
+        <% @cart_items.each do |cart_item| %>
+          <tr>
+            <td>
+              <%= cart_item.item.name %>
+            </td>
+            <td>
+              <%= ((cart_item.item.price * 1.10).floor).to_s(:delimited) %>
+            </td>
+            <td>
+              <%= form_with model: cart_item, url: cart_item_path(cart_item), local:true do |f| %>
+                <%= f.select :quantity, options_for_select((1..10).to_a, selected: cart_item.quantity) %>
+                <%= f.submit '変更', class: 'btn btn-success' %>
+              <% end %>
+            </td>
+            <td>
+              <%= ((cart_item.item.price * 1.10).to_i * (cart_item.quantity).to_i).to_s(:delimited) %>
+            </td>
+            <td>
+              <%= link_to '削除する', cart_item_path(cart_item.id), method: :delete, class: "btn btn-sm btn-danger" %>
+            </td>
+          </tr>
+        <% end %>
       </table>
     </div>
   </div>
@@ -46,7 +52,7 @@
       <table class="table table-bordered">
         <tr>
           <th class="table-active">合計金額</th>
-          <td>〇〇円</td>
+          <td><%= @total_price.floor.to_s(:delimited) %></td>
         </tr>
       </table>
     </div>

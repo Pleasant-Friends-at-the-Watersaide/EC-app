@@ -11,11 +11,11 @@ Rails.application.routes.draw do
     patch 'customers'         => 'customers#update'
     resources :addresses  , only: [:index, :create, :destroy, :edit, :update]
     resources :items      , only: [:index, :show]
-    resources :cart_items , only: [:index, :create, :update, :destroy]
     delete 'cart_items/all_destroy' => 'cart_items#all_destroy'
+    resources :cart_items , only: [:index, :create, :update, :destroy]
+    post 'orders/confirm' => 'orders#confirm'
     get  'orders/thank'   => 'orders#thank'
     resources :orders, only: [:index, :show, :new, :create]
-    post 'orders/confirm' => 'orders#confirm'
   end
 
   devise_for :customers, controllers: {
