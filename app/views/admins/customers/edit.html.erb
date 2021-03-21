@@ -4,6 +4,9 @@
       <h3 class="head-line title_h3">
         <%= @customer.last_name + @customer.first_name %>さんの会員情報編集
       </h3>
+      <div id="error">
+        <%= render "customers/shared/error_messages", resource: @customer %>
+      </div>
 
       <%= form_with model: @customer, url: admins_customer_path, local: true do |f| %>
       <div class="col-xs-10">
