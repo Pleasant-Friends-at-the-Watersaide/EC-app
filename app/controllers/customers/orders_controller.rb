@@ -14,10 +14,10 @@ class Customers::OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+
   end
 
   def confirm
-
       @cart_items = current_customer.cart_items
       @order = Order.new #一旦初期化をするorderに何もない状態にする
 
@@ -46,9 +46,8 @@ class Customers::OrdersController < ApplicationController
       render 'new'
       end
   end
-
   end
-  
+
   def thank
   end
 
