@@ -24,12 +24,20 @@
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
+header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+}
+
 .box-background {
    position: relative;
    background-image: url('apple-pie.jpg');
    background-size: cover;
    background-position: center;
-   width: 100%;
+   top: 60px;
+   
    height: 50vh;
 }
 
