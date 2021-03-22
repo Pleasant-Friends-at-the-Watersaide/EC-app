@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-4">
   <div class="row">
     <h4>注⽂履歴詳細</h4>
   </div>
@@ -62,19 +62,14 @@
           <th>個数</th>
           <th>小計</th>
         </tr>
-        <tr>
         <% @order_details.each do |order_detail| %>
-          <td><%= order_detail.item.name %></td>
-          <td class="text-right"><%= order_detail.price.to_s(:delimited) %>円</td>
-          <td class="text-right"><%= order_detail.quantity %></td>
-          <td class="text-right"><%= order_detail.price * order_detail.quantity.to_s(:delimited) %>円</td>
+          <tr>
+            <td><%= order_detail.item.name %></td>
+            <td class="text-right"><%= order_detail.price.to_s(:delimited) %>円</td>
+            <td class="text-right"><%= order_detail.quantity %></td>
+            <td class="text-right"><%= (order_detail.price * order_detail.quantity).to_s(:delimited) %>円</td>
+          </tr>
         <% end %>
-        </tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
       </table>
     </div>
   </div>
