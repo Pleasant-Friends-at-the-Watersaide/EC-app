@@ -2,8 +2,8 @@ class Admins::OrderDetailsController < ApplicationController
   before_action :authenticate_admin!
 
   def update
-     @order_detail = Order_detail.find(params[:id])
-     @order.update(order_detail_params)
+     @order_detail = OrderDetail.find(params[:id])
+     @order_detail.update(order_detail_params)
      flash[:notice] = "You have edited successfully."
      redirect_to request.referer
   end

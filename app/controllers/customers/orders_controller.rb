@@ -8,6 +8,18 @@ class Customers::OrdersController < ApplicationController
   def create
     @order = current_customer.orders.new(order_params)
     @order.save
+    @cart_items = current_customer.cart_items.all
+     @cart_items.each do |cart_item|
+        @order_details = OrderDetail.new             
+        @order_details.item_id = cart_item.item.id
+        @order_details.order_id = @order.id
+        @order_details.price = cart_item.item.price
+        @order_details.quantity = cart_item.quantity
+        @order_details.production_status = 0
+        @order_details.save
+      end
+     current_customer.cart_items.destroy_all
+     redirect_to orders_thank_path
   end
 
   def index
