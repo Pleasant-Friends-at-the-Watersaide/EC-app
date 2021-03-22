@@ -63,3 +63,13 @@ end
       # image: open("./app/assets/images/cake-2001781_1280.jpg")
     )
  end
+
+ 3.times do |n|
+    OrderDetail.create!(
+     item_id: n + 1,
+     order_id: n + 1,
+     price: (n + 1) * 100,
+     quantity: n + 1,
+     production_status: 0,
+    )
+ end
