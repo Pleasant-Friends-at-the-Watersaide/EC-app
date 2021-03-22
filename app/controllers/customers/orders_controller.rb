@@ -6,6 +6,8 @@ class Customers::OrdersController < ApplicationController
   end
 
   def create
+    @order = current_customer.orders.new(order_params)
+    @order.save
   end
 
   def index
@@ -14,6 +16,7 @@ class Customers::OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    @order_details = @order.order_details
   end
 
   def confirm
@@ -49,6 +52,12 @@ class Customers::OrdersController < ApplicationController
   end
 
   def thank
+  end
+
+  private
+
+  def order_params
+    params.require(:order).permit(:postal_code, :address, :send_name, :payment_method, :total_price)
   end
 
 end
