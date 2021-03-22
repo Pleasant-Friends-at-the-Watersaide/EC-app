@@ -42,6 +42,7 @@ class Customers::OrdersController < ApplicationController
       @order.send_name = @address.name
       @order.address = @address.address
       else
+      @addresses = Address.where(customer: current_customer)#追加
       render 'new'
       end
   end
