@@ -33,90 +33,90 @@ end
     )
  end
 
-Genre.create!(
-   name: "ケーキ",
-)
+# Genre.create!(
+#   name: "ケーキ",
+# )
 
 
-Genre.create!(
-   name: "プリン",
-)
+# Genre.create!(
+#   name: "プリン",
+# )
 
 
-Genre.create!(
-   name: "焼き菓子",
-)
+# Genre.create!(
+#   name: "焼き菓子",
+# )
 
 
-Genre.create!(
-   name: "キャンディ",
-)
+# Genre.create!(
+#   name: "キャンディ",
+# )
 
- Item.create!(
-      name: "チョコケーキ",
-      genre_id:  1,
-      introduction: "ドス黒いケーキ",
-      price: 432,
-      # image: open("./app/assets/images/cake-2001781_1280.jpg")
-    )
+# Item.create!(
+#       name: "チョコケーキ",
+#       genre_id:  1,
+#       introduction: "ドス黒いケーキ",
+#       price: 432,
+#       # image: open("./app/assets/images/cake-2001781_1280.jpg")
+#     )
 
-  Item.create!(
-      name: "プッチンプリン",
-      genre_id: 2,
-      introduction: "市販のやつ",
-      price: 330,
-      # image: open("./app/assets/images/cake-2001781_1280.jpg")
-    )
+#   Item.create!(
+#       name: "プッチンプリン",
+#       genre_id: 2,
+#       introduction: "市販のやつ",
+#       price: 330,
+#       # image: open("./app/assets/images/cake-2001781_1280.jpg")
+#     )
 
-  Item.create!(
-      name: "焼いた菓子",
-      genre_id: 3,
-      introduction: "焼いた菓子",
-      price: 210,
-      # image: open("./app/assets/images/cake-2001781_1280.jpg")
-    )
+#   Item.create!(
+#       name: "焼いた菓子",
+#       genre_id: 3,
+#       introduction: "焼いた菓子",
+#       price: 210,
+#       # image: open("./app/assets/images/cake-2001781_1280.jpg")
+#     )
 
-  Item.create!(
-      name: "ぺろぺろキャンディ",
-      genre_id: 4,
-      introduction: "子供も喜ぶ甘いキャンディ",
-      price: 200,
-      # image: open("./app/assets/images/cake-2001781_1280.jpg")
-    )
-
-
+#   Item.create!(
+#       name: "ぺろぺろキャンディ",
+#       genre_id: 4,
+#       introduction: "子供も喜ぶ甘いキャンディ",
+#       price: 200,
+#       # image: open("./app/assets/images/cake-2001781_1280.jpg")
+#     )
 
 
 
- # 11.times do |n|
- #  Order.create!(
- #      customer_id: n + 1,
- #      send_name: "太郎#{n + 1}",
- #      postal_code: "1234567",
- #      address: "広島県八千代1−1−1",
- #      payment_method: 0,
- #      shipping_cost: 800,
- #      total_price: "#{(n + 1) * 800}",
- #      status: 0,
- #    )
- # end
-
- # 10.times do |n|
- #  Genre.create!(
- #      name: "ケーキ#{n + 1}",
- #     )
- # end
 
 
- # 10.times do |n|
- #  Item.create!(
- #      name: "チョコケーキ#{n + 1}",
- #      genre_id: n + 1,
- #      introduction: "チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高",
- #      price: (n + 1) * 100,
- #      # image: open("./app/assets/images/cake-2001781_1280.jpg")
- #    )
- # end
+  # 11.times do |n|
+  # Order.create!(
+  #     customer_id: n + 1,
+  #     send_name: "太郎#{n + 1}",
+  #     postal_code: "1234567",
+  #     address: "広島県八千代1−1−1",
+  #     payment_method: 0,
+  #     shipping_cost: 800,
+  #     total_price: "#{(n + 1) * 800}",
+  #     status: 0,
+  #   )
+  # end
+
+  10.times do |n|
+   Genre.create!(
+       name: "ケーキ#{n + 1}",
+      )
+  end
+
+
+  10.times do |n|
+   Item.create!(
+       name: "チョコケーキ#{n + 1}",
+       genre_id: n + 1,
+       introduction: "チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高",
+       price: (n + 1) * 100,
+       image: open("./app/assets/images/cake-2001781_1280.jpg")
+     )
+  end
 
 
  # 3.times do |n|
