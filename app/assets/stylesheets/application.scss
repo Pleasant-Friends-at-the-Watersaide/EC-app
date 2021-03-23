@@ -103,4 +103,22 @@ footer{
    collor: #d3d3d3;
 }
 
+/*=====================================
+ About 
+=====================================*/
+.about-bg {
+   background-image: url('about-bg.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 100vh;
+   position: relative;
+   background-position: center;
+}
+
+.about-bg-wrapper {
+   position: absolute;
+   width: 100vw;
+   height: 100vh;
+   background: rgba(0, 0, 0, 0.5);
+}
 
