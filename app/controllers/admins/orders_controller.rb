@@ -12,7 +12,7 @@ class Admins::OrdersController < ApplicationController
      @order_detail = @order.order_details
 
      if @order.status == "入金確認"
-      @order_detail.update_all(production_status: "製作待ち")
+      @order_detail.update_all(production_status: 1)
      end
      flash[:notice] = "You have edited successfully."
      redirect_to admins_order_path(@order)
