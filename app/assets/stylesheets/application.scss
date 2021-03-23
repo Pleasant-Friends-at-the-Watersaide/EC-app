@@ -24,6 +24,15 @@
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
+header{
+   width: 100%;
+  background: linear-gradient(45deg, #c66 0%, #c66 30%, #696 70%,#696 100%);
+}
+
+.nav-item{
+   padding: 0 20px;
+}
+
 .box-background {
    position: relative;
    background-image: url('apple-pie.jpg');
@@ -66,6 +75,7 @@
 
 footer{
    margin-top: auto;
+   background: linear-gradient(45deg, #c66 0%, #c66 30%, #696 70%,#696 100%);
 }
 
 .limegreen {
