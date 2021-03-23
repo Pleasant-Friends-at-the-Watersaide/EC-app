@@ -13,9 +13,11 @@
   <body>
     <div class="wrap">
       <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark ">
+          <%= image_tag 'logogo.png', :size =>'90x70' %>
           <a class="navbar-brand" href="/">
-          <i class="fas fa-utensils fa-fw"></i>ながのCAKE</a>
+           <%= image_tag 'ojisan.png', :size =>'70x70'%>ながのCAKE
+          </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -28,87 +30,48 @@
                 </li>
                 <div class="navbar-nav">
                   <li class="nav-item">
-                    <%= link_to customers_my_page_path do %>
-                      <i class="fas fa-user"></i>
-                      マイページ
-                    <% end %>
+                     <%= link_to "マイページ", customers_my_page_path, :style =>"color:white;" %>
                   </li>
                   <li class="nav-item">
-                    <%= link_to items_path do %>
-                      <i class="fas fa-cookie-bite fa-fw"></i>
-                      商品一覧
-                    <% end %>
+                      <%= link_to "商品一覧", items_path, :style =>"color:white;" %>
                   </li>
                   <li class="nav-item">
-                    <%= link_to cart_items_path do %>
-                      <i class="fas fa-shopping-cart fa-fw"></i>
-                      カート
-                    <% end %>
+                      <%= link_to "カート", cart_items_path, :style =>"color:white;"%>
                   </li>
                   <li class="nav-item">
-                    <%= link_to destroy_customer_session_path, method: :delete do %>
-                      <i class="fas fa-sign-out-alt fa-fw"></i>
-                      ログアウト
-                    <% end %>
+                      <%= link_to "ログアウト", destroy_customer_session_path, method: :delete, :style =>"color:white;" %>
                   </li>
               <!-- 管理者側でログイン時-->
               <% elsif admin_signed_in? %>
                   <li class="nav-item">
-                    <%= link_to admins_items_path do %>
-                      <i class="fas fa-cookie-bite fa-fw"></i>
-                      商品一覧
-                    <% end %>
+                     <%= link_to "商品一覧", admins_items_path, :style =>"color:white;" %>
                   </li>
                   <li class="nav-item">
-                    <%= link_to admins_customers_path do %>
-                      <i class="fas fa-users fa-fw"></i>
-                      会員一覧
-                    <% end %>
+                      <%= link_to "会員一覧", admins_customers_path, :style =>"color:white;" %>
                   </li>
                   <li class="nav-item">
-                    <%= link_to admins_root_path do %>
-                      <i class="fas fa-history fa-fw"></i>
-                      注文履歴一覧
-                    <% end %>
+                      <%= link_to "注文履歴一覧", admins_root_path, :style =>"color:white;"%>
                   </li>
                   <li class="nav-item">
-                    <%= link_to admins_genres_path do %>
-                      <i class="far fa-user fa-fw"></i>
-                      ジャンル一覧
-                    <% end %>
+                      <%= link_to" ジャンル一覧", admins_genres_path, :style =>"color:white;"%>
                   </li>
                   <li class="nav-item">
-                    <%= link_to destroy_admin_session_path, method: :delete do %>
-                      <i class="fas fa-sign-in-alt fa-fw"></i>
-                      ログアウト
-                    <% end %>
+                      <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, :style =>"color:white;"%>
                   </li>
               <!-- ログインしてない時 -->
               <% else %>
                 <div class="navbar-nav">
                   <li class="nav-item">
-                    <%= link_to about_path do %>
-                      <i class="fab fa-speakap fa-fw"></i>
-                      About
-                    <% end %>
+                      <%= link_to "About", about_path, :style =>"color:white;" %>
                   </li>
                   <li class="nav-item">
-                    <%= link_to items_path do %>
-                      <i class="fas fa-cookie-bite fa-fw"></i>
-                      商品一覧
-                    <% end %>
+                      <%= link_to "商品一覧", items_path, :style =>"color:white;" %>
                   </li>
                   <li class="nav-item">
-                    <%= link_to new_customer_registration_path do %>
-                      <i class="far fa-user fa-fw"></i>
-                      新規登録
-                    <% end %>
+                      <%= link_to "新規登録", new_customer_registration_path, :style =>"color:white;" %>
                   </li>
                   <li class="nav-item">
-                    <%= link_to new_customer_session_path do %>
-                      <i class="fas fa-sign-in-alt fa-fw"></i>
-                      ログイン
-                    <% end %>
+                      <%= link_to "ログイン", new_customer_session_path, :style =>"color:white;"%>
                   </li>
                 </div>
               <% end %>
@@ -132,7 +95,7 @@
       <main>
         <%= yield %>
       </main>
-      <footer class="bg-dark text-white pt-5 pb-4">
+      <footer class="bg-danger text-white pt-5 pb-4">
         <div>
           <p class="text-center">ながのCAKE製作委員会</p>
         </div>
