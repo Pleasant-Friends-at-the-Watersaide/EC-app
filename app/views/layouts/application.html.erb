@@ -11,7 +11,7 @@
   </head>
 
   <body>
-  <div class="wrapper">
+    <div class="wrap">
       <header>
         <nav class="navbar navbar-expand-lg navbar-dark ">
           <%= image_tag 'logogo.png', :size =>'90x70' %>
@@ -81,15 +81,15 @@
       </header>
       <!--フラッシュメッセージ-->
       <% if flash[:notice] %>
-        <div class="alert alert-primary" role="alert"><strong><%= notice %></strong></div>
+        <div class="alert alert-primary mb-0" role="alert"><strong><%= notice %></strong></div>
       <% end %>
 
       <% if flash[:alert] %>
-        <div class="alert alert-danger" role="alert"><strong><%= alert %></strong></div>
+        <div class="alert alert-danger mb-0" role="alert"><strong><%= alert %></strong></div>
       <% end %>
 
       <% if flash[:error] %>
-        <div class="alert alert-danger" role="alert"><strong><%= flash[:error] %></strong></div>
+        <div class="alert alert-danger mb-0" role="alert"><strong><%= flash[:error] %></strong></div>
       <% end %>
 
       <main>
@@ -100,6 +100,6 @@
           <p class="text-center">ながのCAKE製作委員会</p>
         </div>
       </footer>
-  </div>
+    </div>
   </body>
 </html>
