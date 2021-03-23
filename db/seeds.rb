@@ -33,6 +33,60 @@ end
     )
  end
 
+# Genre.create!(
+#    name: "ケーキ",
+# )
+
+
+# Genre.create!(
+#    name: "プリン",
+# )
+
+
+# Genre.create!(
+#    name: "焼き菓子",
+# )
+
+
+# Genre.create!(
+#    name: "キャンディ",
+# )
+
+ #  Item.create!(
+ #      name: "チョコケーキ#{n + 1}",
+ #      genre_id: n + 1,
+ #      introduction: "チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高",
+ #      price: (n + 1) * 100,
+ #      # image: open("./app/assets/images/cake-2001781_1280.jpg")
+ #    )
+
+ #  Item.create!(
+ #      name: "チョコケーキ#{n + 1}",
+ #      genre_id: n + 1,
+ #      introduction: "チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高",
+ #      price: (n + 1) * 100,
+ #      # image: open("./app/assets/images/cake-2001781_1280.jpg")
+ #    )
+
+ #  Item.create!(
+ #      name: "チョコケーキ#{n + 1}",
+ #      genre_id: n + 1,
+ #      introduction: "チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高",
+ #      price: (n + 1) * 100,
+ #      # image: open("./app/assets/images/cake-2001781_1280.jpg")
+ #    )
+
+ #  Item.create!(
+ #      name: "チョコケーキ#{n + 1}",
+ #      genre_id: n + 1,
+ #      introduction: "チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高",
+ #      price: (n + 1) * 100,
+ #      # image: open("./app/assets/images/cake-2001781_1280.jpg")
+ #    )
+
+
+
+
 
  # 11.times do |n|
  #  Order.create!(
@@ -47,29 +101,30 @@ end
  #    )
  # end
 
- 10.times do |n|
-  Genre.create!(
-      name: "ケーキ#{n + 1}",
-     )
- end
+ # 10.times do |n|
+ #  Genre.create!(
+ #      name: "ケーキ#{n + 1}",
+ #     )
+ # end
 
 
- 10.times do |n|
-  Item.create!(
-      name: "チョコケーキ#{n + 1}",
-      genre_id: n + 1,
-      introduction: "チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高",
-      price: (n + 1) * 100,
-      # image: open("./app/assets/images/cake-2001781_1280.jpg")
-    )
- end
+ # 10.times do |n|
+ #  Item.create!(
+ #      name: "チョコケーキ#{n + 1}",
+ #      genre_id: n + 1,
+ #      introduction: "チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高",
+ #      price: (n + 1) * 100,
+ #      # image: open("./app/assets/images/cake-2001781_1280.jpg")
+ #    )
+ # end
 
- 3.times do |n|
-    OrderDetail.create!(
-     item_id: n + 1,
-     order_id: n + 1,
-     price: (n + 1) * 100,
-     quantity: n + 1,
-     production_status: 0,
-    )
- end
+
+ # 3.times do |n|
+ #    OrderDetail.create!(
+ #     item_id: n + 1,
+ #     order_id: n + 1,
+ #     price: (n + 1) * 100,
+ #     quantity: n + 1,
+ #     production_status: 0,
+ #    )
+ # end
