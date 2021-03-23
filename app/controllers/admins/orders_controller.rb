@@ -9,9 +9,12 @@ class Admins::OrdersController < ApplicationController
   def update
      @order = Order.find(params[:id])
      @order.update(order_params)
+     @order_detail = @order.order_details
+     if @order.status == "入金確認"
+      @order_detail.update_all(production_status: "製作待ち")
+     end
      flash[:notice] = "You have edited successfully."
-     @order = Order.find(params[:id])
-     redirect_to admins_order_path
+     redirect_to admins_order_path(@order)
   end
 
   private
