@@ -85,11 +85,9 @@ main {
    text-decoration: none;
 }
 
-.wrapper{
- display: flex;
- flex-direction: column;
- min-height: 100vh;
- }
+.wrap{
+  overflow: hidden;
+}
 
 footer{
    margin-top: auto;
@@ -104,7 +102,7 @@ footer{
 }
 
 /*=====================================
- About 
+ About
 =====================================*/
 .about-bg {
    background-image: url('about-bg.jpg');
