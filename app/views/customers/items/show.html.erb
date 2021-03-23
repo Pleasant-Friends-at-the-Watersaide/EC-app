@@ -8,7 +8,7 @@
         <h3 class="font-weight-bold"><%= @item.name %></h3>
         <p><%= @item.introduction %></p>
         <div class="mt-5">
-          <strong class="h3"><%= @item.price.to_s(:delimited, delimiter: ',') %>円</strong>
+          <strong class="h3"><%= ((@item.price * 1.10).floor).to_s(:delimited, delimiter: ',') %>円</strong>
           <span class="text-muted">(税込)</span>
         </div>
         <div class="d-flex mt-4">

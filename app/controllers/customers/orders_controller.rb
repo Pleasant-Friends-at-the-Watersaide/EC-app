@@ -10,7 +10,7 @@ class Customers::OrdersController < ApplicationController
     @order.save
     @cart_items = current_customer.cart_items.all
      @cart_items.each do |cart_item|
-        @order_details = OrderDetail.new             
+        @order_details = OrderDetail.new
         @order_details.item_id = cart_item.item.id
         @order_details.order_id = @order.id
         @order_details.price = cart_item.item.price

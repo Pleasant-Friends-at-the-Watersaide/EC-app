@@ -65,11 +65,11 @@
         <% @order_details.each do |order_detail| %>
           <tr>
             <td><%= order_detail.item.name %></td>
-            <td class="text-right"><%= order_detail.price.to_s(:delimited) %>円</td>
+            <td class="text-right"><%= ((order_detail.price * 1.10).floor).to_s(:delimited) %>円</td>
             <td class="text-right"><%= order_detail.quantity %></td>
-            <td class="text-right"><%= (order_detail.price * order_detail.quantity).to_s(:delimited) %>円</td>
+            <td class="text-right"><%= ((order_detail.price * 1.10 * order_detail.quantity).floor).to_s(:delimited) %>円</td>
           </tr>
-        <% end %> 
+        <% end %>
       </table>
     </div>
   </div>
