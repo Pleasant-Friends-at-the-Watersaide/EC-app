@@ -24,6 +24,14 @@
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
+main {
+   background-color: #FFFCDB;
+}
+
+.no-underline {
+   text-decoration:none !important;
+}
+
 .box-background {
    position: relative;
    background-image: url('apple-pie.jpg');
@@ -56,12 +64,14 @@
 
 .all_item {
    text-align: right;
+   margin-top: 30px;
+   text-decoration: none;
 }
 
 .wrapper{
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
  }
 
 footer{
