@@ -104,9 +104,14 @@ footer{
    collor: #d3d3d3;
 }
 
-/*=====================================
- About
-=====================================*/
+
+.naganocake{
+   background-image: url('naganocake.jpg');
+   background-size: cover;
+   background-position: center;
+   height: 70vh;
+}
+
 .about-bg {
    background-image: url('about-bg.jpg');
    background-size: cover;
@@ -124,3 +129,9 @@ footer{
 }
 
 
+.ant{
+   background-image: url('ant.jpg');
+   background-size: auto;
+   background-position: bottom;
+   height: 60vh;
+}
