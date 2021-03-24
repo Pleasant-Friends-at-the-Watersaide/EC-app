@@ -34,7 +34,8 @@
 
 main {
   background-color: #FFFCDB;
-   height: 100vh;
+  min-height: calc(100vh - 7rem);
+  
 }
 
 .no-underline {
@@ -42,7 +43,7 @@ main {
    text-decoration:none !important;
 }
 
-.wrap{
+.wrap {
   overflow: hidden;
 }
 
