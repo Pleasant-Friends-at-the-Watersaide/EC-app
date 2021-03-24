@@ -52,38 +52,55 @@ Genre.create!(
   name: "キャンディ",
 )
 
+
 Item.create!(
-      name: "チョコケーキ",
+      name: "ストロベリーケーキ",
       genre_id:  1,
-      introduction: "ドス黒いケーキ",
+      introduction: "長野県産のイチゴをふんだんに使用しました！",
       price: 432,
-      # image: open("./app/assets/images/cake-2001781_1280.jpg")
+      image: open("./app/assets/images/berries-cake.jpg")
     )
 
   Item.create!(
-      name: "プッチンプリン",
+      name: "ホールフルーツケーキ",
+      genre_id: 1,
+      introduction: "イタリア産のフルーツを輸入しました！",
+      price: 200,
+      image: open("./app/assets/images/cake.jpg")
+    )
+
+
+  Item.create!(
+      name: "カラメルプリン",
       genre_id: 2,
-      introduction: "市販のやつ",
+      introduction: "長野県で取れた卵を使用しました！",
       price: 330,
-      # image: open("./app/assets/images/cake-2001781_1280.jpg")
+      image: open("./app/assets/images/pudding1.jpg")
     )
 
   Item.create!(
-      name: "焼いた菓子",
+      name: "アップルパイ",
       genre_id: 3,
-      introduction: "焼いた菓子",
+      introduction: "長野県さんの新鮮なりんごを濃縮しました！",
       price: 210,
-      # image: open("./app/assets/images/cake-2001781_1280.jpg")
+      image: open("./app/assets/images/applepie.jpg")
     )
-
+    
+  Item.create!(
+      name: "お星様クッキー",
+      genre_id: 3,
+      introduction: "オンライン限定！まるでお星様のようなクッキー！",
+      price: 200,
+      image: open("./app/assets/images/cookie.jpeg")
+    )
+    
   Item.create!(
       name: "ぺろぺろキャンディ",
       genre_id: 4,
       introduction: "子供も喜ぶ甘いキャンディ",
       price: 200,
-      # image: open("./app/assets/images/cake-2001781_1280.jpg")
+      image: open("./app/assets/images/candy2.jpg")
     )
-
 
 
 
@@ -101,22 +118,22 @@ Item.create!(
   #   )
   # end
 
-  # 10.times do |n|
-  #  Genre.create!(
-  #      name: "ケーキ#{n + 1}",
-  #     )
-  # end
+#   10.times do |n|
+#     Genre.create!(
+#         name: "ケーキ#{n + 1}",
+#       )
+#   end
 
 
-  # 10.times do |n|
-  #  Item.create!(
-  #      name: "チョコケーキ#{n + 1}",
-  #      genre_id: n + 1,
-  #      introduction: "チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高",
-  #      price: (n + 1) * 100,
-  #      image: open("./app/assets/images/cake-2001781_1280.jpg")
-  #    )
-  # end
+#   10.times do |n|
+#     Item.create!(
+#         name: "チョコケーキ#{n + 1}",
+#         genre_id: n + 1,
+#         introduction: "チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高チョコケーキ最高",
+#         price: (n + 1) * 100,
+#         image: open("./app/assets/images/cake-2001781_1280.jpg")
+#       )
+#   end
 
 
  # 3.times do |n|
