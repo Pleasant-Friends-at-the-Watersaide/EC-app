@@ -28,6 +28,28 @@
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
+/*=====================================
+ 共通
+=====================================*/
+
+main {
+   background-color: #BDB76B;
+   height: 100vh;
+}
+
+.no-underline {
+   // link_toにno-underlineクラスをつけると下線消えます
+   text-decoration:none !important;
+}
+
+.wrap{
+  overflow: hidden;
+}
+
+/*=====================================
+ header
+=====================================*/
+
 header{
    width: 100%;
    background: linear-gradient(45deg, #d46c4f 0%, #d46c4f 30%, #9e4028 70%, #9e4028 100%);
@@ -44,15 +66,9 @@ header{
   border-radius: 0.5em;/*角丸*/
 }
 
-main {
-   background-color: #BDB76B;
-   height: 100vh;
-}
-
-.no-underline {
-   // link_toにno-underlineクラスをつけると下線消えます
-   text-decoration:none !important;
-}
+/*=====================================
+ customer / top
+=====================================*/
 
 .container-fluid {
    padding: 0;
@@ -94,15 +110,6 @@ main {
    text-decoration: none;
 }
 
-.wrap{
-  overflow: hidden;
-}
-
-footer{
-   margin-top: auto;
-   background: linear-gradient(45deg, #d46c4f 0%, #d46c4f 30%, #9e4028 70%, #9e4028 100%);
-}
-
 .limegreen {
    color: #32cd32;
 }
@@ -111,13 +118,16 @@ footer{
    collor: #d3d3d3;
 }
 
-
 .naganocake{
    background-image: url('naganocake.jpg');
    background-size: cover;
    background-position: center;
    height: 70vh;
 }
+
+/*=====================================
+ about
+=====================================*/
 
 .about-bg {
    background-image: url('about-bg.jpg');
@@ -135,10 +145,19 @@ footer{
    background: rgba(0, 0, 0, 0.5);
 }
 
-
+/*=====================================
+=====================================*/
 .ant{
    background-image: url('ant.jpg');
    background-size: auto;
    background-position: bottom;
    height: 60vh;
+}
+
+/*=====================================
+ footer
+=====================================*/
+footer{
+   margin-top: auto;
+   background: linear-gradient(45deg, #d46c4f 0%, #d46c4f 30%, #9e4028 70%, #9e4028 100%);
 }
