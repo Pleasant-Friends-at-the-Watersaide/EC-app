@@ -34,7 +34,6 @@
 
 main {
   background-color: #FFFCDB;
-
    height: 100vh;
 }
 
@@ -119,13 +118,6 @@ header{
    collor: #d3d3d3;
 }
 
-.naganocake{
-   background-image: url('naganocake.jpg');
-   background-size: cover;
-   background-position: center;
-   height: 70vh;
-}
-
 /*=====================================
  about
 =====================================*/
@@ -147,12 +139,20 @@ header{
 }
 
 /*=====================================
+thank
 =====================================*/
 .ant{
    background-image: url('ant.jpg');
    background-size: auto;
    background-position: bottom;
    height: 60vh;
+}
+
+.naganocake{
+   background-image: url('naganocake.jpg');
+   background-size: cover;
+   background-position: center;
+   height: 70vh;
 }
 
 /*=====================================
