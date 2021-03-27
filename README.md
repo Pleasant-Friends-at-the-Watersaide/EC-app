@@ -6,7 +6,8 @@ InstagramのDMやメールで通販の注文を受けていたが、情報管理
 
 #  アプリトップページ
 
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
+<img width="60%" alt="naganocake_top" src="https://user-images.githubusercontent.com/67051841/112711231-1e8e0180-8f0a-11eb-847e-05d8c1bcd8d9.png">
+
 
 # 機能
 
