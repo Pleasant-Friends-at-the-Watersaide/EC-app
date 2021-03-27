@@ -6,7 +6,7 @@ InstagramのDMやメールで通販の注文を受けていたが、情報管理
 
 #  アプリトップページ
 
-<img width="60%" alt="naganocake_top" src="https://user-images.githubusercontent.com/67051841/112711231-1e8e0180-8f0a-11eb-847e-05d8c1bcd8d9.png">
+<img width="80%" alt="naganocake_top" src="https://user-images.githubusercontent.com/67051841/112711231-1e8e0180-8f0a-11eb-847e-05d8c1bcd8d9.png">
 
 
 # 機能
