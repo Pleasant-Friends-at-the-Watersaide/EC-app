@@ -1,0 +1,165 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap";
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
+
+/*=====================================
+ Reset CSS
+=====================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+/*=====================================
+ 共通
+=====================================*/
+
+main {
+  background-color: #FFFCDB;
+  min-height: calc(100vh - 7rem);
+  
+}
+
+.no-underline {
+   // link_toにno-underlineクラスをつけると下線消えます
+   text-decoration:none !important;
+}
+
+.wrap {
+  overflow: hidden;
+}
+
+/*=====================================
+ header
+=====================================*/
+
+header{
+   width: 100%;
+   background: linear-gradient(45deg, #d46c4f 0%, #d46c4f 30%, #9e4028 70%, #9e4028 100%);
+}
+
+.nav-item{
+   padding: 10px 20px;
+}
+
+.youkoso{
+  color: #BDB76B;
+  border: solid 3px #BDB76B;/*線色*/
+  padding: 0.5em;/*文字周りの余白*/
+  border-radius: 0.5em;/*角丸*/
+}
+
+/*=====================================
+ customer / top
+=====================================*/
+
+.container-fluid {
+   padding: 0;
+}
+
+.box-background {
+   background-image: url('apple-pie.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 55vh;
+   position: relative;
+   background-position: center;
+}
+
+.top-box {
+   position: absolute;
+   width: 100%;
+   height: 55vh;
+   background: rgba(0, 0, 0, 0.4);
+}
+
+.top-title {
+   color: rgba(255, 255, 255, 1);
+   text-align: center;
+   letter-spacing: 4px;
+   padding: 160px 0 60px 0;
+}
+
+.top-text {
+   color: rgba(255, 255, 255, 1);
+   text-align: center;
+   letter-spacing: 4px;
+   line-height: 1.5rem;
+}
+
+.all_item {
+   text-align: right;
+   margin-top: 30px;
+   text-decoration: none;
+}
+
+.limegreen {
+   color: #32cd32;
+}
+
+.lightgray {
+   collor: #d3d3d3;
+}
+
+/*=====================================
+ about
+=====================================*/
+
+.about-bg {
+   background-image: url('about-bg.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 100vh;
+   position: relative;
+   background-position: center;
+}
+
+.about-bg-wrapper {
+   position: absolute;
+   width: 100vw;
+   height: 100vh;
+   background: rgba(0, 0, 0, 0.5);
+}
+
+/*=====================================
+thank
+=====================================*/
+.ant{
+   background-image: url('ant.jpg');
+   background-size: auto;
+   background-position: bottom;
+   height: 60vh;
+}
+
+.naganocake{
+   background-image: url('naganocake.jpg');
+   background-size: 95% 100%;
+   background-position: center;
+   height: 70vh;
+}
+
+/*=====================================
+ footer
+=====================================*/
+footer{
+   margin-top: auto;
+   background: linear-gradient(45deg, #d46c4f 0%, #d46c4f 30%, #9e4028 70%, #9e4028 100%);
+}
